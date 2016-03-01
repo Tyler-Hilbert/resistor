@@ -1,7 +1,8 @@
 #include "Resistor.h"
 
-string Resistor::toString() {
-	return "This needs to be compleet:";
+string Resistor::getResistance() {
+	string equation = "(" + getBandNum0() + getBandNum1() + ")*" + getMultiplier();
+	return equation;
 }
 string Resistor::getNumBands() {
 	return numBands;

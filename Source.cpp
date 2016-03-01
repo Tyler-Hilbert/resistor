@@ -1,13 +1,8 @@
-/*
-TODO: update tthis
-Solves Ohm's law
-I=V/R or current = voltage / resistance
-*/
-
 /**
-Need to add unit test to resistor
+todo: add unit testing
+todo: change string to num
+todo: correct input
 */
-
 
 #include <iostream>
 #include <string>
@@ -21,7 +16,7 @@ int main() {
 	// Get input
 	// Todo: add cout
 	/**
-	enter numBands
+			enter numBands
 
 			enter multiplier
 			enter tolerance,
@@ -44,7 +39,7 @@ int main() {
 	r.setBandNum1(bandNum1);
 
 	cout << r.toString();
-
+	cout << r.getResistance();
 
 
 	system("pause");

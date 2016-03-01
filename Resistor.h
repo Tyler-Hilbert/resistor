@@ -2,31 +2,28 @@
 #define _RESISTOR_H
 
 #include <string>
+#include <vector>
+#include "BigNum.h"
+#include "Multiplier.h"
 
 using namespace std;
 
 class Resistor {
 public:
-	string toString();
+	static const enum COLOR { Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White };
 
-	// Sets and Gets
-	string getNumBands();
-	string getMultiplier();
+	BigNum getResistance();
+	BigNum getMultiplier();
 	string getTolerence();
-	string getBandNum0();
-	string getBandNum1();
-	void setNumBands(const string &n);
-	void setMultiplier(const string &m);
+	void setMultiplier(const Multiplier &m);
 	void setTolerence(const string &t);
-	void setBandNum0(const string &b);
-	void setBandNum1(const string &b);
-
+	void setResistance(vector<COLOR> bands);
+	void setResistance(const BigNum &r);
+	void setBaseValue(const unsigned short int &v);
 private:
-	string numBands;
-	string multiplier;
+	Multiplier multiplier;
 	string tolerence;
-	string bandNum0;
-	string bandNum1;
+	unsigned int baseValue;
 };
 
 #endif
