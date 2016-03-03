@@ -1,36 +1,41 @@
 #include "Resistor.h"
 
-string Resistor::getResistance() {
-	string equation = "(" + getBandNum0() + getBandNum1() + ")*" + getMultiplier();
-	return equation;
+#include <string>
+#include <vector>
+#include "BigNum.h"
+#include "Multiplier.h"
+
+BigNum Resistor::getResistance(){
+	// TOdo: implement overloaded operator here
+	//return multiplier * baseValue;
+	return BigNum("100");
 }
-string Resistor::getNumBands() {
-	return numBands;
-}
-string Resistor::getMultiplier() {
+
+Multiplier Resistor::getMultiplier() {
 	return multiplier;
 }
+
 string Resistor::getTolerence() {
 	return tolerence;
 }
-string Resistor::getBandNum0() {
-	return bandNum0;
+
+void Resistor::setMultiplier(const Multiplier &m) {
+	// TODO: implement copy construcotr for multiplier
+	//multiplier(m);
 }
-string Resistor::getBandNum1() {
-	return bandNum1;
-}
-void Resistor::setNumBands(const string &n) {
-	numBands = n;
-}
-void Resistor::setMultiplier(const string &m) {
-	multiplier = m;
-}
+
 void Resistor::setTolerence(const string &t) {
-	tolerence = t;
+	tolerence.assign(t);
 }
-void Resistor::setBandNum0(const string &b) {
-	bandNum0 = b;
+
+void Resistor::setResistance(vector<COLOR> bands) {
+	// TODO: implement this
 }
-void Resistor::setBandNum1(const string &b) {
-	bandNum1 = b;
+
+void Resistor::setResistance(const BigNum &r) {
+	// Todo: implement this
+}
+
+void Resistor::setBaseValue(const unsigned short int &v) {
+	baseValue = v;
 }

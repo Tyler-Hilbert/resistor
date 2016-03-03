@@ -7,11 +7,11 @@ using namespace std;
 
 class Multiplier {
 public:
-	Multiplier(const char exponent);
-	Multiplier(const BigNum &multiplier);
+	Multiplier(const char exp);
+	//Multiplier(const BigNum &multiplier); todo: Implement this
 	BigNum getMultiplier();
 	char getExponent();
-	void setExponent();
+	void setExponent(const char exp);
 private:
 	char exponent;
 };
