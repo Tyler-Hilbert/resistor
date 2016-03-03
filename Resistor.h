@@ -13,7 +13,7 @@ public:
 	static const enum COLOR { Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White };
 
 	BigNum getResistance();
-	BigNum getMultiplier();
+	Multiplier getMultiplier();
 	string getTolerence();
 	void setMultiplier(const Multiplier &m);
 	void setTolerence(const string &t);

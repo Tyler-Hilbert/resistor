@@ -12,8 +12,19 @@ Multiplier::Multiplier(const char exp) {
 //}
 
 BigNum Multiplier::getMultiplier() {
-	// Todo: Implement this;
-	BigNum bn("100");
+	string bn = "1";
+	for (int i = 0; i < exponent; i++) {
+		bn.append("0");
+	}
+	
+	if (exponent < 0) {
+		string prefix = ".";
+		for (int i = 1; i < abs(exponent); i++) {
+			prefix.append("0");
+		}
+		bn = prefix + bn;
+	}
+	return BigNum(bn);
 }
 
 void Multiplier::setExponent(const char exp) {
