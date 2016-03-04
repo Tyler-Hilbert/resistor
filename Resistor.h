@@ -12,6 +12,8 @@ class Resistor {
 public:
 	static const enum COLOR { Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White };
 
+	Resistor(vector<COLOR> &b);
+
 	BigNum getResistance();
 	Multiplier getMultiplier();
 	string getTolerence();
@@ -21,7 +23,7 @@ public:
 	void setResistance(const BigNum &r);
 	void setBaseValue(const unsigned short int &v);
 private:
-	Multiplier multiplier;
+	//Multiplier multiplier;
 	string tolerence;
 	unsigned int baseValue;
 };

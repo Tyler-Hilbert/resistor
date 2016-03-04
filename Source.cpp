@@ -6,6 +6,7 @@ todo: correct input
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Resistor.h"
 #include "Multiplier.h"
 #include "BigNum.h"
@@ -13,6 +14,9 @@ todo: correct input
 using namespace std;
 
 int main() {
+	vector<Resistor::COLOR> bands = { Resistor::Brown, Resistor::Black, Resistor::Brown, Resistor::Brown };
+	Resistor r0(bands);
+	cout << r0.getResistance().toString();
 	//string numBands, multiplier, tolerance, bandNum0, bandNum1; // Input strings of variable;
 
 	// Get input

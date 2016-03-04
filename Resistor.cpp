@@ -5,15 +5,24 @@
 #include "BigNum.h"
 #include "Multiplier.h"
 
-BigNum Resistor::getResistance(){
-	// TOdo: implement overloaded operator here
-	//return multiplier * baseValue;
-	return BigNum("100");
+
+Resistor::Resistor(vector<COLOR> &b) {
+	if (b.size() == 4) {
+		tolerence = "+/-x%";
+		baseValue = b.at(0) * 10 + b.at(1);
+	}
+	// TODO: convert band color to correct resistor values
 }
 
-Multiplier Resistor::getMultiplier() {
-	return multiplier;
+BigNum Resistor::getResistance(){
+	// TOdo: implement overloaded operator here
+	//multiplier * baseValue;
+	return BigNum(to_string(baseValue));
 }
+
+//Multiplier Resistor::getMultiplier() {
+	//return multiplier;
+//}
 
 string Resistor::getTolerence() {
 	return tolerence;
