@@ -10,14 +10,15 @@ Resistor::Resistor(vector<COLOR> &b) {
 	if (b.size() == 4) {
 		tolerence = "+/-x%";
 		baseValue = b.at(0) * 10 + b.at(1);
+		// This needs to be switched to a constructor
+		multiplier.setExponent(b.at(2)); // Adjust and test for for -1,-2
 	}
 	// TODO: convert band color to correct resistor values
 }
 
 BigNum Resistor::getResistance(){
 	// TOdo: implement overloaded operator here
-	//multiplier * baseValue;
-	return BigNum(to_string(baseValue));
+	return multiplier.getMultiplier().mult(baseValue);
 }
 
 //Multiplier Resistor::getMultiplier() {

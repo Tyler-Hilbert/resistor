@@ -14,7 +14,7 @@ todo: correct input
 using namespace std;
 
 int main() {
-	vector<Resistor::COLOR> bands = { Resistor::Brown, Resistor::Black, Resistor::Brown, Resistor::Brown };
+	vector<Resistor::COLOR> bands = { Resistor::Red, Resistor::Red, Resistor::Brown, Resistor::Brown };
 	Resistor r0(bands);
 	cout << r0.getResistance().toString();
 	//string numBands, multiplier, tolerance, bandNum0, bandNum1; // Input strings of variable;

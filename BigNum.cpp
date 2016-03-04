@@ -51,3 +51,8 @@ BigNum BigNum::add(BigNum &bn) {
 	BigNum returnNum(newBigNum);
 	return returnNum;
 }
+
+BigNum BigNum::mult(unsigned int num) {
+	//Todo: implement this
+	return BigNum(toString());
+}

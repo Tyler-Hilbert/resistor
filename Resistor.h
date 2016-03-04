@@ -23,7 +23,7 @@ public:
 	void setResistance(const BigNum &r);
 	void setBaseValue(const unsigned short int &v);
 private:
-	//Multiplier multiplier;
+	Multiplier multiplier;
 	string tolerence;
 	unsigned int baseValue;
 };
