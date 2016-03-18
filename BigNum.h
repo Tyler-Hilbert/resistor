@@ -11,7 +11,7 @@ public:
 	BigNum(const string &n);
 	string toString();
 	BigNum add(BigNum &bn);
-	BigNum mult(unsigned int num);
+	BigNum mult(BigNum &bn);
 private:
 	vector<char> nums;
 };

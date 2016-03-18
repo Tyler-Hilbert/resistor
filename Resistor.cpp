@@ -8,17 +8,22 @@
 
 Resistor::Resistor(vector<COLOR> &b) {
 	if (b.size() == 4) {
-		tolerence = "+/-x%";
+		tolerence = "+/-x%"; // TODO: Set tolerence parsing
 		baseValue = b.at(0) * 10 + b.at(1);
 		// This needs to be switched to a constructor
-		multiplier.setExponent(b.at(2)); // Adjust and test for for -1,-2
+		multiplier.setExponent(b.at(2)); // TODO: Adjust and test for for -1,-2
+	} else if (b.size() == 5) {
+		tolerence = "+/-x%"; // ToDO: Set tolerance parsing
+		baseValue = b.at(0) * 100 + b.at(1) * 10 + b.at(2);
+		multiplier.setExponent(b.at(3));
 	}
 	// TODO: convert band color to correct resistor values
 }
 
 BigNum Resistor::getResistance(){
 	// TOdo: implement overloaded operator here
-	return multiplier.getMultiplier().mult(baseValue);
+	BigNum bnBV(to_string(baseValue)); // Big Number base value
+	return multiplier.getMultiplier().mult(bnBV);
 }
 
 //Multiplier Resistor::getMultiplier() {

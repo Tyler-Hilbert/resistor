@@ -52,7 +52,45 @@ BigNum BigNum::add(BigNum &bn) {
 	return returnNum;
 }
 
-BigNum BigNum::mult(unsigned int num) {
-	//Todo: implement this
-	return BigNum(toString());
+BigNum BigNum::mult(BigNum &bn) {
+	string newBigNum = "0";
+	string n1 = bn.toString();
+	string n2 = toString();
+
+	if (n1.length() > n2.length())
+		n1.swap(n2);
+
+	for (int i = n1.length() - 1; i >= 0; --i) {
+		string temp = n2;
+		int currentDigit = n1[i] - '0';
+		int carry = 0;
+
+		for (int j = temp.length() - 1; j >= 0; --j) {
+			temp[j] = ((temp[j] - '0') * currentDigit) + carry;
+
+			if (temp[j] > 9) {
+				carry = (temp[j] / 10);
+				temp[j] -= (carry * 10);
+			} else
+				carry = 0;
+
+			temp[j] += '0'; // back to string mood
+		}
+
+		if (carry > 0)
+			temp.insert(0, 1, (carry + '0'));
+
+		temp.append((n1.length() - i - 1), '0'); // as like mult by 10, 100, 1000, 10000 and so on
+
+		BigNum num(newBigNum);
+		BigNum bnTemp(temp);
+		BigNum bnRes = num.add(bnTemp); // O(n)
+		newBigNum = bnRes.toString();
+	}
+
+	while (newBigNum[0] == '0' && newBigNum.length() != 1) // erase leading zeros
+		newBigNum.erase(0, 1);
+
+	BigNum returnNum(newBigNum);
+	return returnNum;
 }

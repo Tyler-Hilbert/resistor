@@ -1,5 +1,8 @@
 /**
 todo: add unit testing
+	Choose between Cygwin and MinGW
+		CMake the project
+	Add Google tester
 todo: change string to num
 todo: correct input
 */
@@ -14,9 +17,13 @@ todo: correct input
 using namespace std;
 
 int main() {
-	vector<Resistor::COLOR> bands = { Resistor::Red, Resistor::Red, Resistor::Brown, Resistor::Brown };
-	Resistor r0(bands);
-	cout << r0.getResistance().toString();
+	vector<Resistor::COLOR> bands0 = { Resistor::Red, Resistor::Red, Resistor::Brown, Resistor::Brown };
+	Resistor r0(bands0);
+	cout << r0.getResistance().toString() << "\n";
+
+	vector<Resistor::COLOR> bands1 = { Resistor::Orange, Resistor::Red, Resistor::Green, Resistor::Yellow, Resistor::Brown };
+	Resistor r1(bands1);
+	cout << r1.getResistance().toString() << "\n";
 	//string numBands, multiplier, tolerance, bandNum0, bandNum1; // Input strings of variable;
 
 	// Get input
