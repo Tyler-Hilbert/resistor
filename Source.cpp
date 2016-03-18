@@ -1,12 +1,3 @@
-/**
-todo: add unit testing
-	Choose between Cygwin and MinGW
-		CMake the project
-	Add Google tester
-todo: change string to num
-todo: correct input
-*/
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -24,35 +15,8 @@ int main() {
 	vector<Resistor::COLOR> bands1 = { Resistor::Orange, Resistor::Red, Resistor::Green, Resistor::Yellow, Resistor::Brown };
 	Resistor r1(bands1);
 	cout << r1.getResistance().toString() << "\n";
-	//string numBands, multiplier, tolerance, bandNum0, bandNum1; // Input strings of variable;
 
-	// Get input
-	// Todo: add cout
-	/**
-			enter numBands
-
-			enter multiplier
-			enter tolerance,
-			enter band num - x
-			..
-			your amps is:
-			**/
-	//cin >> numBands;
-	//cin >> multiplier;
-	//cin >> tolerance;
-	//cin >> bandNum0;
-	//cin >> bandNum1;
-
-	// Create resistor object
-	//Resistor r; //Resistor r = new Resistor(); // TODO: C++ heaap vs stack
-	//r.setNumBands(numBands);
-	//r.setMultiplier(multiplier);
-	//r.setTolerence(tolerance);
-	//r.setBandNum0(bandNum0);
-	//r.setBandNum1(bandNum1);
-
-	//cout << r.toString();
-	//cout << r.getResistance();
+	// Todo: Get input from iostream
 	
 	
 	//Todo: add this to unit test
