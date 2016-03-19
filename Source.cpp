@@ -4,17 +4,23 @@
 #include "Resistor.h"
 #include "Multiplier.h"
 #include "BigNum.h"
+#include "Series.h"
 
 using namespace std;
 
 int main() {
 	vector<Resistor::COLOR> bands0 = { Resistor::Red, Resistor::Red, Resistor::Brown, Resistor::Brown };
 	Resistor r0(bands0);
-	cout << r0.toString() << "\n";
+	cout << "Resistor 0: " << r0.toString() << "\n";
 
 	vector<Resistor::COLOR> bands1 = { Resistor::Orange, Resistor::Red, Resistor::Green, Resistor::Yellow, Resistor::Green };
 	Resistor r1(bands1);
-	cout << r1.toString() << "\n";
+	cout << "Resistor 1: " << r1.toString() << "\n";
+
+	Series s;
+	cout << "Resistance in series: " << s.getResistance(r0, r1).toString() << "ohmns\n";
+
+
 
 	// Todo: Get input from iostream
 	
