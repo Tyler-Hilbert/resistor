@@ -1,4 +1,4 @@
-#include "Resistor.h"
+﻿#include "Resistor.h"
 
 #include <string>
 #include <vector>
@@ -8,16 +8,48 @@
 
 Resistor::Resistor(vector<COLOR> &b) {
 	if (b.size() == 4) {
-		tolerence = "+/-x%"; // TODO: Set tolerence parsing
 		baseValue = b.at(0) * 10 + b.at(1);
 		// This needs to be switched to a constructor
 		multiplier.setExponent(b.at(2)); // TODO: Adjust and test for for -1,-2
+		parseTolerence(b.at(3));
 	} else if (b.size() == 5) {
-		tolerence = "+/-x%"; // ToDO: Set tolerance parsing
 		baseValue = b.at(0) * 100 + b.at(1) * 10 + b.at(2);
 		multiplier.setExponent(b.at(3));
+		parseTolerence(b.at(4));
 	}
-	// TODO: convert band color to correct resistor values
+}
+
+// Sets the tolerence
+void Resistor::parseTolerence(Resistor::COLOR c) {
+	switch (c) {
+	case Brown:
+		tolerence = "+-1%";
+		break;
+	case Red:
+		tolerence = "+-2%;";
+		break;
+	case Green:
+		tolerence = "+-.5%";
+		break;
+	case Blue:
+		tolerence = "+-.25%";
+		break;
+	case Violet:
+		tolerence = "+-.1%";
+		break;
+	case Grey:
+		tolerence = "+-.05%";
+		break;
+	case Gold:
+		tolerence = "+-5%";
+		break;
+	case Silver:
+		tolerence = "+-10%";
+		break;
+	default:
+		tolerence = "+-%";
+		break;
+	}
 }
 
 BigNum Resistor::getResistance(){
@@ -53,4 +85,8 @@ void Resistor::setResistance(const BigNum &r) {
 
 void Resistor::setBaseValue(const unsigned short int &v) {
 	baseValue = v;
+}
+
+string Resistor::toString() {
+	return getResistance().toString() + "ohms" + tolerence;
 }

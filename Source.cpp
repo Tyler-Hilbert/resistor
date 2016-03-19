@@ -10,11 +10,11 @@ using namespace std;
 int main() {
 	vector<Resistor::COLOR> bands0 = { Resistor::Red, Resistor::Red, Resistor::Brown, Resistor::Brown };
 	Resistor r0(bands0);
-	cout << r0.getResistance().toString() << "\n";
+	cout << r0.toString() << "\n";
 
-	vector<Resistor::COLOR> bands1 = { Resistor::Orange, Resistor::Red, Resistor::Green, Resistor::Yellow, Resistor::Brown };
+	vector<Resistor::COLOR> bands1 = { Resistor::Orange, Resistor::Red, Resistor::Green, Resistor::Yellow, Resistor::Green };
 	Resistor r1(bands1);
-	cout << r1.getResistance().toString() << "\n";
+	cout << r1.toString() << "\n";
 
 	// Todo: Get input from iostream
 	

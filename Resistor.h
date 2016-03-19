@@ -10,7 +10,7 @@ using namespace std;
 
 class Resistor {
 public:
-	static const enum COLOR { Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White };
+	static const enum COLOR { Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White, Gold, Silver };
 
 	Resistor(vector<COLOR> &b);
 
@@ -22,10 +22,14 @@ public:
 	void setResistance(vector<COLOR> bands);
 	void setResistance(const BigNum &r);
 	void setBaseValue(const unsigned short int &v);
+
+	string toString();
 private:
 	Multiplier multiplier;
 	string tolerence;
 	unsigned int baseValue;
+
+	void parseTolerence(Resistor::COLOR c);
 };
 
 #endif
