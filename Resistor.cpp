@@ -1,11 +1,5 @@
 ﻿#include "Resistor.h"
 
-#include <string>
-#include <vector>
-#include "BigNum.h"
-#include "Multiplier.h"
-
-
 Resistor::Resistor(vector<COLOR> &b) {
 	if (b.size() == 4) {
 		baseValue = b.at(0) * 10 + b.at(1);

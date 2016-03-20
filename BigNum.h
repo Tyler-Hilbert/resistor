@@ -12,6 +12,7 @@ public:
 	string toString();
 	BigNum add(BigNum &bn);
 	BigNum mult(BigNum &bn);
+	BigNum divide(BigNum &bn);
 private:
 	vector<char> nums;
 };

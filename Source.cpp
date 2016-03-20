@@ -5,6 +5,7 @@
 #include "Multiplier.h"
 #include "BigNum.h"
 #include "Series.h"
+#include "Parallel.h"
 
 using namespace std;
 
@@ -18,7 +19,10 @@ int main() {
 	cout << "Resistor 1: " << r1.toString() << "\n";
 
 	Series s;
-	cout << "Resistance in series: " << s.getResistance(r0, r1).toString() << "ohmns\n";
+	cout << "Resistance in series: " << s.getResistance(r0, r1).toString() << "ohms\n";
+
+	Parallel p;
+	cout << "Resistance in parallel: " << p.getResistance(r0, r1).toString() << "ohms\n";
 
 
 

@@ -6,7 +6,6 @@
 #include "BigNum.h"
 #include "Multiplier.h"
 
-using namespace std;
 
 class Resistor {
 public:

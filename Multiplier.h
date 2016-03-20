@@ -3,8 +3,6 @@
 
 #include "BigNum.h"
 
-using namespace std;
-
 class Multiplier {
 public:
 	Multiplier(const char exp = 0);

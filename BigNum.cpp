@@ -1,5 +1,5 @@
 #include "BigNum.h"
-#include <algorithm>
+#define MAX 10000 // for strings
 
 BigNum::BigNum(const string& n) {
 	nums = vector<char>(n.begin(), n.end());
@@ -50,6 +50,30 @@ BigNum BigNum::add(BigNum &bn) {
 
 	BigNum returnNum(newBigNum);
 	return returnNum;
+}
+
+BigNum BigNum::divide(BigNum &bn) {
+	long long rem = 0;
+	string result;
+	result.resize(MAX);
+	string n = bn.toString();
+	long long den = 0;
+
+
+	for (int indx = 0, len = n.length(); indx<len; ++indx) {
+		rem = (rem * 10) + (n[indx] - '0');
+		result[indx] = rem / den + '0';
+		rem %= den;
+	}
+	result.resize(n.length());
+
+	while (result[0] == '0' && result.length() != 1)
+		result.erase(0, 1);
+
+	if (result.length() == 0)
+		result = "0";
+	BigNum num(result);
+	return num;
 }
 
 BigNum BigNum::mult(BigNum &bn) {
