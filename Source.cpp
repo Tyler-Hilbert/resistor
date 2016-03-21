@@ -24,8 +24,6 @@ int main() {
 	Parallel p;
 	cout << "Resistance in parallel: " << p.getResistance(r0, r1).toString() << "ohms\n";
 
-
-
 	// Todo: Get input from iostream
 	
 	

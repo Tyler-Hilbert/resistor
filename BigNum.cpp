@@ -52,13 +52,16 @@ BigNum BigNum::add(BigNum &bn) {
 	return returnNum;
 }
 
+/**
+MUST HAVE A DENOMINATOR IN LONG LONG RANGE...
+todo: update this function to handle values outside of long long range
+*/
 BigNum BigNum::divide(BigNum &bn) {
+	string n = toString();
+	long long den = stoll(bn.toString());
 	long long rem = 0;
 	string result;
 	result.resize(MAX);
-	string n = bn.toString();
-	long long den = 0;
-
 
 	for (int indx = 0, len = n.length(); indx<len; ++indx) {
 		rem = (rem * 10) + (n[indx] - '0');
@@ -72,6 +75,8 @@ BigNum BigNum::divide(BigNum &bn) {
 
 	if (result.length() == 0)
 		result = "0";
+
+	
 	BigNum num(result);
 	return num;
 }
