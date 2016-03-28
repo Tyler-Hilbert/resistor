@@ -46,10 +46,8 @@ void Resistor::parseTolerence(Resistor::COLOR c) {
 	}
 }
 
-BigNum Resistor::getResistance(){
-	// TOdo: implement overloaded operator here
-	BigNum bnBV(to_string(baseValue)); // Big Number base value
-	return multiplier.getMultiplier().mult(bnBV);
+unsigned long long Resistor::getResistance(){
+	return baseValue * multiplier.getMultiplier();
 }
 
 //Multiplier Resistor::getMultiplier() {
@@ -73,7 +71,7 @@ void Resistor::setResistance(vector<COLOR> bands) {
 	// TODO: implement this
 }
 
-void Resistor::setResistance(const BigNum &r) {
+void Resistor::setResistance(const unsigned long long &r) {
 	// Todo: implement this
 }
 
@@ -82,5 +80,5 @@ void Resistor::setBaseValue(const unsigned short int &v) {
 }
 
 string Resistor::toString() {
-	return getResistance().toString() + "ohms" + tolerence;
+	return to_string(getResistance()) + "ohms" + tolerence;
 }

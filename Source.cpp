@@ -3,7 +3,6 @@
 #include <vector>
 #include "Resistor.h"
 #include "Multiplier.h"
-#include "BigNum.h"
 #include "Series.h"
 #include "Parallel.h"
 
@@ -19,10 +18,10 @@ int main() {
 	cout << "Resistor 1: " << r1.toString() << "\n";
 
 	Series s;
-	cout << "Resistance in series: " << s.getResistance(r0, r1).toString() << "ohms\n";
+	cout << "Resistance in series: " << to_string(s.getResistance(r0, r1)) << "ohms\n";
 
 	Parallel p;
-	cout << "Resistance in parallel: " << p.getResistance(r0, r1).toString() << "ohms\n";
+	//cout << "Resistance in parallel: " << to_string(p.getResistance(r0, r1)) << "ohms\n";
 
 	// Todo: Get input from iostream
 	

@@ -3,8 +3,9 @@
 
 #include <string>
 #include <vector>
-#include "BigNum.h"
 #include "Multiplier.h"
+
+using namespace std;
 
 
 class Resistor {
@@ -13,13 +14,13 @@ public:
 
 	Resistor(vector<COLOR> &b);
 
-	BigNum getResistance();
+	unsigned long long getResistance();
 	Multiplier getMultiplier();
 	string getTolerence();
 	void setMultiplier(const Multiplier &m);
 	void setTolerence(const string &t);
 	void setResistance(vector<COLOR> bands);
-	void setResistance(const BigNum &r);
+	void setResistance(const unsigned long long &r);
 	void setBaseValue(const unsigned short int &v);
 
 	string toString();

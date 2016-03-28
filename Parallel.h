@@ -3,12 +3,11 @@
 
 #include <string>
 #include "Resistor.h"
-#include "BigNum.h"
 
 class Parallel {
 public:
-	string toString();
-	BigNum getResistance(Resistor &r1, Resistor &r2);
+	//string toString();
+	unsigned long long getResistance(Resistor &r1, Resistor &r2);
 private:
 };
 #endif
