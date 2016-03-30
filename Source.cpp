@@ -21,7 +21,7 @@ int main() {
 	cout << "Resistance in series: " << to_string(s.getResistance(r0, r1)) << "ohms\n";
 
 	Parallel p;
-	cout << "Resistance in parallel: " << to_string(p.getResistance(r0, r1)) << "ohms\n"; // TODO: fix rounding here
+	cout << "Resistance in parallel: " << to_string(p.getResistance(r0, r1)) << "ohms\n";
 
 	// Todo: Get input from iostream
 	
