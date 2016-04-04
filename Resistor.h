@@ -10,7 +10,7 @@ using namespace std;
 
 class Resistor {
 public:
-	static const enum COLOR { Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White, Gold, Silver };
+	enum COLOR { Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White, Gold, Silver };
 
 	Resistor(vector<COLOR> &b);
 
