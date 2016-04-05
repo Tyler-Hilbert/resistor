@@ -3,7 +3,6 @@
 
 #include <string>
 #include <vector>
-#include "Multiplier.h"
 
 using namespace std;
 
@@ -19,9 +18,8 @@ public:
 
 	string toString();
 private:
-	Multiplier multiplier;
 	string tolerence;
-	unsigned int baseValue;
+	unsigned long long resistance;
 
 	void parseTolerence(Resistor::COLOR c);
 };

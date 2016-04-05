@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include "Resistor.h"
-#include "Multiplier.h"
 #include "Series.h"
 #include "Parallel.h"
 
