@@ -40,8 +40,6 @@ int main() {
 
 	//cout << "BN0 EXP0:" << bn0.toString() << "\nBN1 Exp1:" << bn1.toString() << "\nexp-1BN2:" << bn2.toString() << "\nBN3 exp3:" << bn3.toString();
 	//cout << bn4.toString();
-	
-	
-	system("pause");
+
 	return 1;
 }

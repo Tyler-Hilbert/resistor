@@ -15,13 +15,7 @@ public:
 	Resistor(vector<COLOR> &b);
 
 	unsigned long long getResistance();
-	Multiplier getMultiplier();
-	string getTolerence();
-	void setMultiplier(const Multiplier &m);
-	void setTolerence(const string &t);
-	void setResistance(vector<COLOR> bands);
-	void setResistance(const unsigned long long &r);
-	void setBaseValue(const unsigned short int &v);
+	void setResistorValues(vector<COLOR> &b);
 
 	string toString();
 private:
