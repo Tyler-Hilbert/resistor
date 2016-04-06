@@ -16,11 +16,15 @@ int main() {
 	Resistor r1(bands1);
 	cout << "Resistor 1: " << r1.toString() << "\n";
 
+	Resistor r2(bands0);
+	cout << "Resistor 2: " << r2.toString() << "\n";
+
+	vector<Resistor *> resistors = {&r0, &r1, &r2};
 	Series s;
-	cout << "Resistance in series: " << to_string(s.getResistance(r0, r1)) << "ohms\n";
+	cout << "Resistance in series: " << to_string(s.getResistance(resistors)) << "ohms\n";
 
 	Parallel p;
-	cout << "Resistance in parallel: " << to_string(p.getResistance(r0, r1)) << "ohms\n";
+	cout << "Resistance in parallel: " << to_string(p.getResistance(resistors)) << "ohms\n";
 
 	// Todo: Get input from iostream
 	

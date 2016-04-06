@@ -2,13 +2,14 @@
 #define _Series_H
 
 #include "Resistor.h"
+#include <vector>
 
 using namespace std;
 
 // Calculates the resistance of resistors in series
 class Series {
 public:
-	unsigned long long getResistance(Resistor &r1, Resistor &r2);
+	unsigned long long getResistance(vector<Resistor *> &resistors);
 private:
 };
 
