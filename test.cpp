@@ -19,10 +19,9 @@ int main() {
     vector<Resistor::COLOR> bands1 = { Resistor::Yellow, Resistor::Black, Resistor::Black, Resistor::Black, Resistor::Red };
     Resistor r1(bands1);
     assert (r1.toString().compare("400ohms+-2%") == 0);
-
     // TODO: Add parallel and series unit test here........
 
-    cout << "Pass\n";
+	cout << "Pass\n";
     return 1;
 }
 

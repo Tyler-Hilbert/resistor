@@ -12,7 +12,7 @@ int main() {
 	Resistor r0(bands0);
 	cout << "Resistor 0: " << r0.toString() << "\n";
 
-	vector<Resistor::COLOR> bands1 = { Resistor::Orange, Resistor::Red, Resistor::Green, Resistor::Yellow, Resistor::Green };
+    vector<Resistor::COLOR> bands1 = { Resistor::Yellow, Resistor::Black, Resistor::Black, Resistor::Black, Resistor::Red };
 	Resistor r1(bands1);
 	cout << "Resistor 1: " << r1.toString() << "\n";
 

@@ -13,7 +13,7 @@ void Resistor::parseTolerence(Resistor::COLOR c) {
 		tolerence = "+-1%";
 		break;
 	case Red:
-		tolerence = "+-2%;";
+		tolerence = "+-2%";
 		break;
 	case Green:
 		tolerence = "+-.5%";
